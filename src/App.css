@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Kanit';
+    font-weight: 900;
+    src: local('Kanit'), url(./fonts/Kanit-Black.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Kanit';
+    font-weight: 700;
+    src: local('Kanit'), url(./fonts/Kanit-Bold.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Kanit';
+    font-weight: 800;
+    src: local('Kanit'), url(./fonts/Kanit-ExtraBold.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Kanit';
+    font-weight: 200;
+    src: local('Kanit'), url(./fonts/Kanit-ExtraLightItalic.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Kanit';
+    font-weight: 500;
+    src: local('Kanit'), url(./fonts/Kanit-Medium.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Kanit';
+    font-weight: 400;
+    src: local('Kanit'), url(./fonts/Kanit-Regular.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Kanit';
+    font-weight: 600;
+    src: local('Kanit'), url(./fonts/Kanit-SemiBold.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Kanit';
+    font-weight: 100;
+    src: local('Kanit'), url(./fonts/Kanit-Thin.ttf) format('truetype');
+  }
+
+  
+  /* @font-face {
+      font-family: 'Catamaran';
+      font-weight: 900;
+      src: local('Catamaran'), url(./fonts/Lato-Bold.otf) format('truetype');
+  }
+  
+  @font-face {
+      font-family: 'Catamaran';
+      font-weight: 900;
+      src: local('Catamaran'), url(./fonts/Lato-Black.otf) format('truetype');
+  }
+  font-family: 'Catamaran', sans-serif;
+font-family: 'Montserrat Alternates', sans-serif;
+font-family: 'Nunito', sans-serif; */

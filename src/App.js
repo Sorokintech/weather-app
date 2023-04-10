@@ -1,9 +1,17 @@
+import * as S from "./style";
+import { Main } from "./components/main";
+import { Search } from "./components/search";
+import { Weekday } from "./components/weekday";
 
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <S.Container>
+    
+    <Main/>
+    <Weekday/>
+    <Search/>
+    </S.Container>
   );
 }
 
