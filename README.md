@@ -4,7 +4,7 @@ This project is a website for monitoring current weather at any given city aroun
 
 ## Stack
 
-This project has been built with React, Styled-Components for CSS and [using weatherstack API](https://weatherstack.com).
+This project has been built with React, Styled-Components for CSS and [weatherstack API](https://weatherstack.com).
 
 ### Preview of the website 
 
