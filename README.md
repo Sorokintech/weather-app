@@ -8,6 +8,6 @@ This project has been built with React, Styled-Components for CSS and [using wea
 
 ### Preview of the website 
 
-![The preview](https://drive.google.com/file/d/1qxfgicz38L_UO63xrsUs142vI68qmCut/view?usp=share_link)
+![The preview](https://drive.google.com/file/d/1qxfgicz38L_UO63xrsUs142vI68qmCut/view)
 
 
