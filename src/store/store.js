@@ -1,14 +1,9 @@
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { cityReducer } from "./reducers";
-import { dataReducer } from "./reducers/dataReducer";
-
-const rootReducer = combineReducers({
-    currentCity: cityReducer,
-    dataPresent: dataReducer
-});
+// store.js
+import { configureStore } from "@reduxjs/toolkit";
+import stringReducer from "./slice";
 
 const store = configureStore({
-    reducer: rootReducer,
+  reducer: stringReducer,
 });
 
 export default store;

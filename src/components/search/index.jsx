@@ -2,10 +2,12 @@ import * as S from "./style";
 import { cities, citiesAssemble } from "../../global/cities";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { addWeatherData } from "../../store/slice";
+import getWeatherData from "../../global/api";
 
 export const Search = ({ itemsShown, setItemsShown }) => {
   citiesAssemble();
-
+  const dispatch = useDispatch();
   const [value, setValue] = useState();
   const [data, setData] = useState();
   const [country, setCountry] = useState();
@@ -33,11 +35,15 @@ export const Search = ({ itemsShown, setItemsShown }) => {
         {itemsShown
           ? data &&
             data
-              .slice(-4)
+              .slice(-8)
               .sort((a, b) => a.length - b.length)
               .map((item, index) => (
                 <S.listItem
-                  // onClick={() => settingCity(item)}
+                  onClick={() =>
+                    getWeatherData(item).then((data) =>
+                      dispatch(addWeatherData(data))
+                    )
+                  }
                   key={index}
                 >
                   {item}, {country[index]}
