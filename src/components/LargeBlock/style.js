@@ -4,39 +4,43 @@ export const Container = styled.div`
   align-items: center;
   height: fit-content;
   /* background-color: rgba(255, 255, 255, 0.4); */
+  width: auto;
 `;
-export const Icon = styled.img`
-  width: 60px;
-  height: fit-content;
-  grid-column: span 10;
-`;
-export const Description = styled.span`
-  font-size: 20px;
-  grid-column: span 10;
-`;
-
 export const Content = styled.div`
   display: grid;
-  grid-template-columns: repeat(10, 20px);
+  grid-template-columns: repeat(10, 1fr);
   color: #fff;
   align-items: center;
   justify-items: center;
 `;
-export const CityIcon = styled.img`
-  width: 40px;
+export const Icon = styled.img`
+  width: 100px;
   height: fit-content;
-  grid-column: span 3;
+  justify-self: self-end;
+  grid-column: span 4;
 `;
-export const Title = styled.span`
-  font-size: 28px;
-  grid-column: span 7;
+export const Description = styled.span`
+  font-size: 26px;
+  grid-column: span 10;
+  padding: 5px;
 `;
 
-export const Time = styled.span`
-  font-size: 20px;
+export const CityIcon = styled.img`
+  width: 30px;
+  height: fit-content;
+  grid-column: span 2;
+  justify-self: self-end;
+`;
+export const Title = styled.span`
+  font-size: 32px;
   grid-column: span 7;
 `;
 export const Temp = styled.span`
-  font-size: 20px;
-  grid-column: span 3;
+  font-size: 28px;
+  grid-column: span 6;
+  justify-self: start-end;
+`;
+export const Time = styled.span`
+  font-size: 18px;
+  grid-column: span 10;
 `;
