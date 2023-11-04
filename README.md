@@ -1,13 +1,31 @@
-# Weather App
+# Weather Information Web App ☀️⛅️🌧️
 
-This project is a website for monitoring current weather at any given city around the world. 
+This is a simple React web application that allows users to check the weather information of a city. Users can enter the city name, and the app will display the current temperature, pressure, humidity, UTC offset and other information using the WeatherStack API.
 
-## Stack
+## Usage 🌍
 
-This project has been built with React, Styled-Components for CSS and [weatherstack API](https://weatherstack.com).
+1. Open the web application in your browser.
+2. Enter the city name in the input field.
+3. Click the suggested city.
+4. View the weather information displayed on the screen.
 
-### Preview of the website 
+## WeatherStack API
 
-![The preview](https://scontent-hel3-1.xx.fbcdn.net/v/t39.30808-6/345034556_942043730447085_5389819105212974278_n.jpg?stp=dst-jpg_p720x720&_nc_cat=109&ccb=1-7&_nc_sid=0debeb&_nc_ohc=IlUpXWmQ3NUAX9HBTWn&_nc_ht=scontent-hel3-1.xx&oh=00_AfBqrsExXz_lOCUZZhRNYgzXsVLtfpK7korYLv1LJYrzGg&oe=645A80AD)
+This project utilizes the WeatherStack API to fetch weather data.
+You'll need to sign up for a free account on [WeatherStack](https://weatherstack.com/) to obtain an API access token.
+Make sure to replace `your-api-token` with your actual WeatherStack API access token.
 
+## Technologies Used 🚀
 
+- React
+- HTML
+- CSS
+
+## How to Run Locally 🏃‍♂️
+
+1. Clone the repository
+2. Navigate to the project directory:
+3. Replace your API-token in api.js
+4. Install dependencies:
+5. Start the development server:
+6. Open your browser and go to `http://localhost:3000` to view the app.
