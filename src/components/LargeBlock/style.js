@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  align-items: center;
-  height: fit-content;
-  /* background-color: rgba(255, 255, 255, 0.4); */
-  width: auto;
+  /* height: fit-content; */
+  grid-column: span 6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 `;
 export const Content = styled.div`
   display: grid;

@@ -13,7 +13,6 @@ const weatherDataSlice = createSlice({
       state.weatherData = action.payload;
     },
     addCityInfo: (state, action) => {
-      console.log(action.payload);
       const cityData = action.payload;
       const dataArray = [];
       const {
@@ -24,19 +23,24 @@ const weatherDataSlice = createSlice({
         pressure,
         uv_index,
         visibility,
+        precip,
       } = cityData;
       dataArray.push(
-        { key: "Cloud Cover", value: `${cloudcover}%`, icon: "cloudcover" },
-        { key: "Humidity", value: `${humidity}%`, icon: "humidity" },
-        { key: "UTC Offset", value: `+${utc_offset} GMT`, icon: "utc_offset" },
-        { key: "Wind Speed", value: `${wind_speed} m/s`, icon: "wind_speed" },
-        { key: "Pressure", value: `${pressure} mm`, icon: "pressure" },
-        { key: "UV Index", value: uv_index, icon: "uv_index" },
-        { key: "Visibility", value: `${visibility} km`, icon: "visibility" }
+        { title: "Cloud Cover", value: `${cloudcover}%`, icon: "cloudcover" },
+        { title: "Precipitation", value: `${precip}%`, icon: "precipitation" },
+        { title: "Humidity", value: `${humidity}%`, icon: "humidity" },
+        {
+          title: "UTC Offset",
+          value: `+${utc_offset} GMT`,
+          icon: "utc_offset",
+        },
+        { title: "Wind Speed", value: `${wind_speed} m/s`, icon: "wind_speed" },
+        { title: "Pressure", value: `${pressure} mm`, icon: "pressure" },
+        { title: "UV Index", value: uv_index, icon: "uv_index" },
+        { title: "Visibility", value: `${visibility} km`, icon: "visibility" }
       );
-      console.log(dataArray);
+
       state.cityInfo = dataArray;
-      console.log(state.cityInfo);
     },
   },
 });

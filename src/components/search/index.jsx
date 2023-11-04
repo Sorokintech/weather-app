@@ -2,7 +2,7 @@ import * as S from "./style";
 import { cities, citiesAssemble } from "../../global/cities";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addWeatherData } from "../../store/slice";
+import { addCityInfo, addWeatherData } from "../../store/slice";
 import getWeatherData from "../../global/api";
 
 export const Search = ({ itemsShown, setItemsShown }) => {
@@ -40,9 +40,10 @@ export const Search = ({ itemsShown, setItemsShown }) => {
               .map((item, index) => (
                 <S.listItem
                   onClick={() =>
-                    getWeatherData(item).then((data) =>
-                      dispatch(addWeatherData(data))
-                    )
+                    getWeatherData(item).then((data) => {
+                      dispatch(addWeatherData(data));
+                      dispatch(addCityInfo(data));
+                    })
                   }
                   key={index}
                 >

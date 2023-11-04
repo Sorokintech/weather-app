@@ -7,10 +7,11 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: fit-content;
-  /* background-color: #000; */
   padding: 10px;
-  border: 1px solid #fff;
-  border-radius: 5px;
+  /* border: 1px solid #fff;
+  border-radius: 5px; */
+  width: 40%;
+  margin: 3px;
 `;
 export const Icon = styled.img`
   width: 30px;

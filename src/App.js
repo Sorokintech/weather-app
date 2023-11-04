@@ -1,7 +1,7 @@
 import * as S from "./style";
 import { Main } from "./components/main";
 import { Search } from "./components/search";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 function App() {
   const [itemsShown, setItemsShown] = useState(true);

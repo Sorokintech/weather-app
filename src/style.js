@@ -6,10 +6,10 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   gap: 30px;
-  background-image: url("./background/back5.jpg");
+  background-image: url("./background/back4.jpg");
   background-repeat: none;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
 `;
 export const Bar = styled.input`
   border-radius: 20%;

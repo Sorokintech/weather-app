@@ -5,6 +5,7 @@ const getWeatherData = async (item) => {
   try {
     const result = await fetch(`${link}&query=${item}`);
     const data = await result.json();
+    console.log(data);
     const { location, current } = data;
     let currentData = {};
     Object.assign(currentData, location, current);
