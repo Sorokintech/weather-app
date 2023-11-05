@@ -1,16 +1,14 @@
 import * as S from "./style";
-// import { cities, citiesAssemble } from "../../global/cities";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addCityInfo, addWeatherData } from "../../store/slice";
 import getWeatherData from "../../global/api";
-import { citiesArray } from "../../global/cityArray";
+import { citiesArray } from "../../global/citiesArray";
 
 export const Search = () => {
   const dispatch = useDispatch();
   const [value, setValue] = useState();
-  const [data, setData] = useState();
-  const [country, setCountry] = useState();
+  const [list, setList] = useState();
   const uniqueCities = [];
   const searchEngine = (inputValue) => {
     if (inputValue.length > 3) {
@@ -19,10 +17,10 @@ export const Search = () => {
         .split(" ")
         .map((e) => e.charAt(0).toUpperCase() + e.slice(1))
         .join(" ")
-        .toLowerCase(); // Convert input city name to lowercase
+        .toLowerCase();
 
       for (let i = 0; i < citiesArray.length; i++) {
-        const city = citiesArray[i].city.toLowerCase(); // Convert city name to lowercase for comparison
+        const city = citiesArray[i].city.toLowerCase();
         const country = citiesArray[i].country;
 
         if (city.startsWith(cityName)) {
@@ -35,15 +33,7 @@ export const Search = () => {
           }
         }
       }
-
-      console.log(uniqueCities);
-      const list = uniqueCities.map((item) => item.city.toUpperCase());
-      const cnt = uniqueCities.map((item) => item.country);
-
-      setData(list);
-      setCountry(cnt);
-      console.log(list);
-      console.log(cnt);
+      setList(uniqueCities);
     } else {
       setValue(inputValue);
     }
@@ -53,19 +43,18 @@ export const Search = () => {
     <S.Container>
       <S.Img src="./icons/cloudy.png" />
       <S.list>
-        {uniqueCities &&
-          uniqueCities
-            .slice(-20)
-            // .sort((a, b) => b.length - a.length)
+        {list &&
+          list
+            .slice(-5)
+            .sort((a, b) => a.city.length - b.city.length)
             .map((item, index) => (
               <S.listItem
                 onClick={() =>
-                  getWeatherData(item).then((data) => {
+                  getWeatherData(item.city).then((data) => {
                     dispatch(addWeatherData(data));
                     dispatch(addCityInfo(data));
-                    setData("");
-                    setCountry("");
                     setValue("");
+                    setList("");
                   })
                 }
                 key={index}
@@ -75,11 +64,10 @@ export const Search = () => {
             ))}
       </S.list>
       <S.SearchBar
-        // onClick={() => {
-        //   listToggle();
-        // }}
         placeholder="Choose the city"
         onChange={(e) => searchEngine(e.target.value)}
+        onBlur={() => setValue("")}
+        defaultValue={""}
         value={value}
       ></S.SearchBar>
     </S.Container>

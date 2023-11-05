@@ -21,6 +21,8 @@ export const SearchBar = styled.input`
   outline: none;
   padding: 20px;
   text-align: start;
+  font-family: "Kanit", sans-serif;
+  font-size: 20px;
   ::placeholder {
     font-family: "Kanit", sans-serif;
     font-size: 25px;
