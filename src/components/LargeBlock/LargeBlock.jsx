@@ -18,7 +18,7 @@ const LargeBlock = () => {
           <S.Icon src={`./icons/additional/cloudcover.png`} />
           <S.Temp>
             {cityData.temperature}°C /{" "}
-            {(cityData.temperature * 1.8 + 32).toString().slice(0, 4)}°F
+            {(cityData.temperature * 1.8 + 32).toString().slice(0, 2)}°F
           </S.Temp>
           {cityData.weather_descriptions &&
             cityData.weather_descriptions.length > 0 && (

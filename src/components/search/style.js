@@ -17,14 +17,14 @@ export const SearchBar = styled.input`
   background-color: transparent;
   width: 100%;
   height: 40px;
-  transition: 1s;
+  transition: 0.5s;
   outline: none;
   padding: 20px;
-  text-align: center;
+  text-align: start;
   ::placeholder {
     font-family: "Kanit", sans-serif;
     font-size: 25px;
-    transition: 1s;
+    transition: 0.5s;
     color: #fff;
     text-align: center;
   }
@@ -34,7 +34,7 @@ export const SearchBar = styled.input`
     ::placeholder {
       display: none;
       color: transparent;
-      font-size: 1px;
+      margin-left: 500px;
     }
   }
 `;
